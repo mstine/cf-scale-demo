@@ -1,0 +1,7 @@
+---
+applications:
+- name: scale-video
+  memory: 128M
+  instances: 1
+  url: scale-video.cfapps.io
+  path: .
