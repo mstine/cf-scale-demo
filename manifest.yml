@@ -1,7 +1,8 @@
 ---
 applications:
-- name: scale-video
+- name: cf-scale-demo
   memory: 128M
   instances: 1
-  url: scale-video.cfapps.io
+  host: cf-scale-demo
+  domain: cfapps.io
   path: .
