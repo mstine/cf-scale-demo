@@ -3,6 +3,6 @@ applications:
 - name: cf-scale-demo
   memory: 128M
   instances: 1
-  host: cf-scale-demo
+  host: cf-scale-demo-${random-word}
   domain: cfapps.io
   path: .

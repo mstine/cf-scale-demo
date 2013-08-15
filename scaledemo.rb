@@ -1,7 +1,15 @@
-require 'rubygems'
-require 'sinatra'
-require 'yaml'
-get '/' do
-   port = ENV['PORT']
-  "<h1>Automatically routed to this instance running on port #{port} by CF dynamic router!</h1>"
-end
+
+  require 'rubygems'
+  require 'sinatra'
+  require 'yaml'
+
+  set :requests, 0
+
+  get '/' do
+     port = ENV['PORT']
+
+     settings.requests += 1
+    "<h1>Routed to instance running on port #{port} by Cloud Foundry router!</h1><h2>#{settings.requests} served.</h2>"
+  end
+
+
